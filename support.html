@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='style.css'>
+    <title>TiPay</title>
+    <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body class="background_image">
+		<div id='desktop_container'>
+		<div class='header' id='nav'>
+        <a href='transactions.html'><img src='TiPay.png' alt='tipay logo'></a>
+				<input class="menu-btn" type="checkbox" id="menu-btn" />
+				<label class="menu-icon" for="menu-btn"><span   class="navicon"></span></label>
+        <ul class='menu'>
+            <li><a href='card.html'>Card Services</a></li>
+        </ul>
+    </div>
+    <div class='index_container' id='support_container'>
+        <div class='col-5 customer_support_page customer_container'>
+            <div class="customer_support_container content_s">
+                <!--img src="background.png" class='bg' alt="Question Mark">-->
+                <h1 class="customer_support_heading">Customer Support</h1>
+                <p class="customer_support_detail">Hello Citizen, we're here to help! Please check our FAQ page before asking any questions!</p>
+                <div class="customer_support_button_container">
+                    <a href="faq.html" id="faq_button">FAQ</a>
+                </div>
+            </div>
+        </div>
+
+        <div class='col-7 support_page_diagram'>   
+            <div class="support_form_container">
+                <form action="javascript:support()">
+                    <h1 class='title'>Raise a Ticket</h1> 
+
+                    <input type='text' class="input_field useFontAwesomeFamily" placeholder="&#xf5b7; Name" name="registerUsername" required>
+                    
+                    <input type='email' class="input_field useFontAwesomeFamily" placeholder="&#xf0e0;  Email" name="email" required>    
+                    
+                    <input type='text' class="input_field useFontAwesomeFamily" placeholder="&#xf044;  Title" name="title" required>    
+    
+                    <textarea class="message_input_box useFontAwesomeFamily" placeholder="&#xf27a;  Message" required></textarea>
+                    
+                    <button>Submit</button>
+                </form>
+            </div>   
+        </div> 
+    </div>
+    </div>
+    <script src='./javascript/main.js'></script>
+    <script src='./javascript/support.js'></script>
+</body>
+</html>

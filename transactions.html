@@ -1,0 +1,182 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>TiPay</title>
+    <link rel="icon" href="favicon.png" type="image/png" sizes="16x16" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body class="background_image">
+    <div id="desktop_container">
+      <div class="header" id="nav">
+        <a href="transactions.html"><img src="TiPay.png" alt="tipay logo"/></a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"
+          ><span class="navicon"></span
+        ></label>
+        <ul class="menu">
+          <li><a href="support.html">Support</a></li>
+          <li><a href="index.html">Log out</a></li>
+        </ul>
+      </div>
+      <div class="container" id="transactions_container">
+        <div class="col-6 transaction_page">
+          <div class="transaction_container_2">
+            <h3 class="dashboard_heading">Account</h3>
+
+            <div class="transaction_welcome_box">
+              <div id="welcome_container">
+                <p class="welcome_text">welcome citizen</p>
+              </div>
+            </div>
+
+            <div class="box_2">
+              <div class="balance_container">
+                <i class="fas fa-piggy-bank"></i>
+                <p>Savings Account</p>
+                <p>971-321 1195880</p>
+              </div>
+
+              <div class="balance_container">
+                <i class="fas fa-hand-holding-usd"></i>
+                <p>Balance</p>
+                <p>$<span id='savingsBalance'>100000</span></p>
+              </div>
+            </div>
+
+            <div class="box_2">
+              <div class="balance_container">
+                <i class="fas fa-money-check"></i>
+                <p>Cheque Account</p>
+                <p>029-512 0984218</p>
+              </div>
+
+              <div class="balance_container">
+                    <i class="fas fa-hand-holding-usd"></i>
+                <p>Balance</p>
+                <p>$<span id='chequeBalance'>9391.87</span></p>
+              </div>
+            </div>
+
+            <form id="pay_button_container" action='pay.html'>
+              <input style='display:none' type='text' required>
+              <button>PAY</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-6 transaction_page_2">
+          <div class="transaction_container">
+            <div class="balance_box">
+              <p class="balance_text">Recent Transactions</p>
+            </div>
+            <div class="balance_box_2">
+              <table>
+                <tr class="transaction_table">
+                  <td class="transaction_date">22/03/19</td>
+                  <td class="transaction_description">7-Eleven #3243</td>
+                  <td class="transaction_amount_out">-$55.80</td>
+                </tr>
+                <tr class="transaction_table">
+                  <td class="transaction_date">22/03/19</td>
+                  <td class="transaction_description">Butcher #3343</td>
+                  <td class="transaction_amount_out">-$77.60</td>
+                </tr>
+                <tr class="transaction_table">
+                  <td class="transaction_date">20/03/19</td>
+                  <td class="transaction_description">Deposit #4545</td>
+                  <td class="transaction_amount_in">+$55.30</td>
+                </tr>
+                <tr class="transaction_table">
+                  <td class="transaction_date">18/03/19</td>
+                  <td class="transaction_description">Car Purchase #4242</td>
+                  <td class="transaction_amount_out">-$3750</td>
+                </tr>
+                <tr class="transaction_table">
+                  <td class="transaction_date">16/03/19</td>
+                  <td class="transaction_description">Withdrawl #4342</td>
+                  <td class="transaction_amount_out">-$1000</td>
+                </tr>
+                <tr class="transaction_table">
+                  <td class="transaction_date">15/03/19</td>
+                  <td class="transaction_description">Tata #4756</td>
+                  <td class="transaction_amount_in">+$2500</td>
+                </tr>
+                <tr class="transaction_table">
+                  <td class="transaction_date">11/03/19</td>
+                  <td class="transaction_description">Butcher #3343</td>
+                  <td class="transaction_amount_out">-$77.60</td>
+                </tr>
+                <tr class="transaction_table">
+                  <td class="transaction_date">11/03/19</td>
+                  <td class="transaction_description">Deposit #4545</td>
+                  <td class="transaction_amount_in">+$55.30</td>
+                </tr>
+                <tr class="transaction_table">
+                  <td class="transaction_date">11/03/19</td>
+                  <td class="transaction_description">Car Purchase #4242</td>
+                  <td class="transaction_amount_out">-$3 750</td>
+                </tr>
+                <tr class="transaction_table">
+                  <td class="transaction_date">8/03/19</td>
+                  <td class="transaction_description">Tata #4756</td>
+                  <td class="transaction_amount_in">+$2500</td>
+                </tr>
+                <tr class="transaction_table">
+                  <td class="transaction_date">7/03/19</td>
+                  <td class="transaction_description">Butcher #3343</td>
+                  <td class="transaction_amount_out">-$77.60</td>
+                </tr>
+                <tr class="transaction_table">
+                  <td class="transaction_date">5/03/19</td>
+                  <td class="transaction_description">Deposit #4545</td>
+                  <td class="transaction_amount_in">+$55.30</td>
+                </tr>
+                <tr class="transaction_table">
+                  <td class="transaction_date">5/03/19</td>
+                  <td class="transaction_description">Car Purchase #4242</td>
+                  <td class="transaction_amount_out">-$3750</td>
+                </tr>
+                <tr class="transaction_table">
+                    <td class="transaction_date">3/03/19</td>
+                    <td class="transaction_description">Tata #4756</td>
+                    <td class="transaction_amount_in">+$2500</td>
+                  </tr>
+                  <tr class="transaction_table">
+                    <td class="transaction_date">1/03/19</td>
+                    <td class="transaction_description">MYER #3343</td>
+                    <td class="transaction_amount_out">-$77.60</td>
+                  </tr>
+                  <tr class="transaction_table">
+                    <td class="transaction_date">1/03/19</td>
+                    <td class="transaction_description">Transfer #4545</td>
+                    <td class="transaction_amount_in">+$55.30</td>
+                  </tr>
+                  <tr class="transaction_table">
+                    <td class="transaction_date">1/03/19</td>
+                    <td class="transaction_description">Tea #4242</td>
+                    <td class="transaction_amount_out">-$3750</td>
+                  </tr>
+                  <tr class="transaction_table">
+                    <td class="transaction_date">1/03/19</td>
+                    <td class="transaction_description">Opening Balance #100</td>
+                    <td class="transaction_amount_in">+$5000</td>
+                  </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./javascript/main.js"></script>
+    <script src="./javascript/transactions.js"></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='style.css'>
+    <title>TiPay</title>
+    <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body class="background_image">
+		<div id='desktop_container'>
+		<div class='header' id='nav'>
+        <a href='transactions.html'><img src='TiPay.png' alt='tipay logo'></a>
+				<input class="menu-btn" type="checkbox" id="menu-btn" />
+				<label class="menu-icon" for="menu-btn"><span   class="navicon"></span></label>
+        <ul class='menu'>
+            <li><a href='support.html'>Support</a></li>
+        </ul>
+    </div>
+    <div class='index_container' id='support_container'>
+        <div class='col-5 customer_support_page customer_container'>
+            <div class="customer_support_container content_s">
+                <!--img src="background.png" class='bg' alt="Question Mark">-->
+                <h1 class="customer_support_heading">Card Services</h1>
+                <p class="customer_support_detail">Is your card stolen, lost or damaged? Request a new card here.</p>
+            </div>
+        </div>
+
+        <div class='col-7 support_page_diagram'>   
+            <div class="support_form_container" id='card_container'>
+
+                    <h4 class="activate_titlte">Report Card:</h4>
+
+                    <select class="dropdown_list"> 
+                        <option value="lost">Lost</option>
+                        <option value="stolen">Stolen</option>
+                        <option value="Damage">Damaged</option>
+                    </select>
+
+                    <form action="javascript:alert('Your request has been processed. ')">
+                        <button class='valid'>Report</button>
+                    </form>
+
+                    <h4 class="activate_titlte">Activate Card:</h4>
+                <form action="javascript:support()">
+                    <input type='text' class="input_field useFontAwesomeFamily" placeholder="&#xf5b7; Card Name" name="name" required>
+                    
+                    <input type='number' class="input_field useFontAwesomeFamily" placeholder="&#xf09d;  Card Number" name="card" required>    
+                    
+                    <input type='date' class="input_field useFontAwesomeFamily" placeholder="&#xf073;  Date" name="date" required>    
+                    
+                    <button disabled>Activate</button>
+                </form>
+            </div>   
+        </div> 
+    </div>
+    </div>
+    <script src='./javascript/main.js'></script>
+    <script src='./javascript/card.js'></script>
+</body>
+</html>

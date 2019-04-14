@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='style.css'>
+    <title>TiPay</title>
+    <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body class="background_image">
+		<div id='desktop_container'>
+		<div class='header' id='nav'>
+            <a href='index.html'><img src='TiPay.png' alt='tipay logo'></a>
+				<input class="menu-btn" type="checkbox" id="menu-btn" />
+				<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class='menu'>
+            <li><a href='support.html'>Support</a></li>
+        </ul>
+    </div>
+    <div class='index_container'>
+        <div class='col-5 content_page' id='sign_in'> 
+            <div class="content_container">
+                <!--<img src="background.png" class='bg' alt="Question Mark">-->
+                <h1 class="heading_signup">Not registered?</h1>
+                <p class="detail_text">Create an account to join the citizens!</p>
+                <div class="signup_button_container">
+                        <a href="#" id="signup_container_button" class='container_button'>SIGN UP</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class='col-5 content_page none' id='create_account'>
+            <div class="content_container">
+                <h1 class="heading_signup">Already a citizen?</h1>
+                <p class="detail_text">Login to your account and start paying!</p>
+                <div class="customer_support_button_container">
+                        <a href="#" id="signin_container_button" class='container_button'>SIGN IN</a>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class='col-7 forms' id='index_forms'>
+                <div class="login_container">
+                    <form action='transactions.html'>
+                        <img id='logo' src='tipayindex.png' alt='TiPay Logo'>
+                        <!-- <h1 id='slogan'>Easy As Tea<span id='tm' style='font-size: 1rem'>™</span></h1> -->
+                        <h1 class='title'>Welcome Citizen</h1>
+                        <input type='email' class="input_field useFontAwesomeFamily" placeholder="&#xf0e0;  Email", FontAwesome" name="loginUsername" required>
+
+                        
+                        <input type='password' class="input_field useFontAwesomeFamily" placeholder="&#xf13e;  Password" name="loginPassword" required>  
+                        
+
+                        <div class="forgot_password_container">
+                            <a href ="#" class="forget_password">Forgot your password?</a>
+                        </div>
+
+                        <!-- <div class="login_button_container">
+                            <a href="transactions.html" class="button">SIGN IN</a>
+                        </div> -->
+                        <button id='signin_button'>SIGN IN</button>
+
+                    </form>
+                </div>
+                 
+                <div id="register_container" class="signup_container">
+                    <form id='signup_form' action="javascript:signUp()">
+                        <h1 class='title'>Become a citizen</h1>
+                        <div class="signup_form_container">
+                            <input type='text' class="input_field useFontAwesomeFamily" placeholder="&#xf5b7; Name" name="registerUsername" required>
+    
+                            <input type='email' class="input_field useFontAwesomeFamily" placeholder="&#xf0e0;  Email" name="email" required>  
+    
+                            <input type='password' class="input_field useFontAwesomeFamily" placeholder="&#xf13e;  Password" name="registerPassword" required>
+                        </div>
+
+
+                        <!-- <div id="signup_button_container">
+                            <a href="#" class="button">SIGN UP</a>
+                        </div> -->
+                        <button id='signup_button'>SIGN UP</button>
+
+                    </form>
+                </div>        
+        </div> 
+    </div>
+        </div>
+    <script src='./javascript/main.js'></script>
+    <script src='./javascript/login.js'></script>
+
+</body>
+</html>

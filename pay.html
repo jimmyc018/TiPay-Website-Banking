@@ -1,0 +1,154 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='style.css'>
+    <title>TiPay</title>
+    <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
+    <div id='desktop_container'>
+    <div class='header' id='nav'>
+        <a href='transactions.html'><img src='TiPay.png' alt='tipay logo'></a>
+				<input class="menu-btn" type="checkbox" id="menu-btn" />
+				<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class='menu'>
+            <li><a href='transactions.html'>Transactions</a></li>
+            <li><a href='support.html'>Support</a></li>
+            <li><a href='index.html'>Log out</a></li>
+        </ul>
+    </div>
+    <div class='pay_container'>
+
+        <div class='content'>
+            <div class='col-4 pay payees'>
+                <h2>Citizens</h2>
+                <div class='payees_container'>
+                    <div class='payee'>
+                        <h3>Mathew Ly</h3>
+                        <p>123-456 00112233</p>
+                        <i class="far fa-check-circle"></i>  
+                    </div>              
+                    <div class='payee'>
+                        <h3>Jimmy Chan</h3>
+                        <p>123-456 00112233</p>
+                        <i class="far fa-check-circle"></i> 
+                    </div>                
+                    <div class='payee'>
+                        <h3>Andi Butros</h3>
+                        <p>0431 456 789</p>
+                        <i class="far fa-check-circle"></i>
+                    </div>
+                </div>
+            </div>
+            <div class='col-4 pay add'>
+                <h2>Connect</h2>
+                <form>
+                    <div id='mobile_container'>
+                    <label>Mobile</label>
+                    <input type="text" pattern="\d*" minlength="10" maxlength="10" name='mobile' required>
+                    </div>
+                    <div id='account_container'>
+                    <label>BSB</label>
+                    <input type="text" pattern="\d*" minlength="6" maxlength="6" name='bsb' required>
+                    <label>Account</label>
+                    <input type="text" pattern="\d*" minlength="7" maxlength="10" name='accnum' required>
+                    </div>
+                    <label>Name</label>
+                    <input class="shown" type="text" pattern="[A-Za-z\s]+" name='name' required>
+                </form>
+                <div class='pay_button'>
+                    <button id='add_button'>Add Citizen</button>
+                </div>
+            </div>
+            <div class='col-4 pay payment'>
+                <h2>Pay</h2>
+                <div id='pay_form'>
+                <form>
+                    <label>Amount ($<span id='balance'></span>)</label>
+                    <input type="text" pattern="^\d+(\.\d{1,2})?$" maxlength="10" name='amount' required>
+                    <label>Date</label>
+                    <div><input id='date-input' type='date' required></div>
+                    <label>Frequency</label>
+                    <div>
+                        <select name='frequency'>
+                            <option>Once</option>
+                            <option>Daily</option>
+                            <option>Weekly</option>
+                            <option>Fortnightly</option>
+                            <option>Monthly</option>
+                            <option>Biannually</option>
+                            <option>Annually</option>
+                        </select>
+                    </div>
+                    <div class='details_container'>
+                        <label>Details (Yours)</label>
+                        <p id='yours'>20</p>
+                        <input id='yours_input' type='text' maxlength='20' required>
+                    </div>
+                    <div class='details_container'>
+                        <label>Details (Thiers)</label>
+                        <p id='theirs'>20</p>
+                        <input id='theirs_input' type='text' maxlength='20' required>
+                    </div>
+                </form>
+                <div class='pay_button'>
+                    <button id='complete_button'>Complete Transaction</button>
+                </div>
+                </div>
+                <div id='success'>
+                    <div id='success_content' class='hide'>
+                            <svg class="progress-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <g class="tick-icon" stroke-width="2" stroke="#97d49c" fill="none" transform="translate(1, 1.2)">
+                                    <path id="tick-outline-path" d="M14 28c7.732 0 14-6.268 14-14S21.732 0 14 0 0 6.268 0 14s6.268 14 14 14z" opacity="0" />
+                                    <path id="tick-path" d="M6.173 16.252l5.722 4.228 9.22-12.69" opacity="0"/>
+                                </g>
+                            </svg>
+                    <table>
+                        <tr>
+                            <h3 id='transaction'>Transaction Successful!</h3>
+                        </tr>
+                        <tr>
+                            <td>From</td>
+                            <td>
+                                <p id='fromName'></p>
+                                <p id='fromAccNum'></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>To</td>
+                            <td>
+                                <p id='sentName'></p>
+                                <p id='accNum'></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Amount</td>
+                            <td><p id='sentAmount'></p></td>
+                        </tr>
+                        <tr>
+                            <td>Date</td>
+                            <td><p id='sentDate'></p></td>
+                        </tr>
+                        <tr>
+                            <td>Frequency</td>
+                            <td><p id='sentFreq'></p></td>
+                        </tr>
+												<tr>
+                            <td></td>
+                            <td><br><p id='close'>close</p></td>
+                        </tr>
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src='https://unpkg.com/popmotion/dist/popmotion.global.min.js'></script>
+    <script src='./javascript/main.js'></script>
+    <script src="./javascript/tipay.js"></script>
+</body>
+</html>
